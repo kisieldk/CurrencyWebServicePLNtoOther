@@ -10,7 +10,7 @@ namespace waluta
     /// <summary>
     /// Summary description for sw
     /// </summary>
-    [WebService(Namespace = "http://webserv-1.apphb.com/")]
+    [WebService(Namespace = "http://webserv-1.apphb.com/sw.asmx")]
     [WebServiceBinding(ConformsTo = WsiProfiles.BasicProfile1_1)]
     [System.ComponentModel.ToolboxItem(false)]
     // To allow this Web Service to be called from script, using ASP.NET AJAX, uncomment the following line. 
