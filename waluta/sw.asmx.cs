@@ -35,7 +35,7 @@ namespace waluta
                 }
 
             }
-            PLN = _GBP * kurs * 100.00;
+            PLN = _GBP * kurs;
             PLN = Math.Round(PLN,2);
             return PLN;
         }
