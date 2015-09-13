@@ -35,7 +35,7 @@ namespace waluta
                 }
 
             }
-            PLN = _GBP * kurs * 100;
+            PLN = _GBP * kurs * 100.00;
 
             return PLN.ToString();
         }
