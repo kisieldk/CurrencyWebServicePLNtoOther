@@ -28,7 +28,7 @@ namespace waluta
 
             ds.ReadXml("http://www.nbp.pl/kursy/xml/LastA.xml");
             var s = ds.Tables[1].Select("kod_waluty = 'GBP'");
-            kurs = Double.Parse(s[0]["kurs_sredni"].ToString());
+            kurs = Double.Parse(s[0]["kurs_sredni"].ToString().Replace(",","."));
             PLN = GBP * kurs;
             PLN = Math.Round(PLN,2);
             return PLN;
@@ -44,7 +44,7 @@ namespace waluta
 
             ds.ReadXml(url);
             var s = ds.Tables[1].Select(string.Format("kod_waluty = '{0}'",waluta));
-            kurs = Double.Parse(s[0]["kurs_sredni"].ToString());
+            kurs = Double.Parse(s[0]["kurs_sredni"].ToString().Replace(",", "."));
 
             nowaKwota = kwota / kurs;
             return nowaKwota;
