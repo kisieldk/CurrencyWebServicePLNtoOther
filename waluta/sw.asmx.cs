@@ -47,6 +47,7 @@ namespace waluta
             kurs = Double.Parse(s[0]["kurs_sredni"].ToString().Replace(",", "."));
 
             nowaKwota = kwota / kurs;
+            nowaKwota = Math.Round(nowaKwota, 2);
             return nowaKwota;
         }
     }
