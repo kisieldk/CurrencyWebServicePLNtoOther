@@ -19,11 +19,11 @@ namespace waluta
     {
 
         [WebMethod]
-        public string ZwrocPLN(string GBP)
+        public double ZwrocPLN(double GBP)
         {
-            double _GBP = Convert.ToDouble(GBP);
+            double _GBP = GBP;
             double kurs = 0.0000;
-            double PLN = 0.0000;
+            double PLN = 0.00;
             DataSet ds = new DataSet();
 
             ds.ReadXml("http://www.nbp.pl/kursy/xml/LastA.xml");
@@ -36,8 +36,8 @@ namespace waluta
 
             }
             PLN = _GBP * kurs * 100.00;
-
-            return PLN.ToString();
+            PLN = Math.Round(PLN,2);
+            return PLN;
         }
     }
 }
